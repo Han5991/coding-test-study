@@ -2,14 +2,14 @@ input = [4, 6, 2, 9, 1]
 
 
 def insertion_sort(array):
-    result = [array[0]]
-    for a in range(1, len(array)):
-        result.append(array[a])
-        for b in range(a, 0, -1):
-            if result[b] < result[b - 1]:
-                result[b - 1], result[b] = result[b], result[b - 1]
+	result = [array[0]]
+	for a in range(1, len(array)):
+		result.append(array[a])
+		for b in range(a, 0, -1):
+			if result[b] < result[b - 1]:
+				result[b - 1], result[b] = result[b], result[b - 1]
 
-    return result
+	return result
 
 
 print(insertion_sort(input))  # [1, 2, 4, 6, 9] 가 되어야 합니다!

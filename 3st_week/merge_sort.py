@@ -1,33 +1,33 @@
 def merge(array1, array2):
-    result = []
-    i, j = 0, 0
-    len1, len2 = len(array1), len(array2)
+	result = []
+	i, j = 0, 0
+	len1, len2 = len(array1), len(array2)
 
-    while i < len1 and j < len2:
-        if array1[i] < array2[j]:
-            result.append(array1[i])
-            i += 1
-        else:
-            result.append(array2[j])
-            j += 1
+	while i < len1 and j < len2:
+		if array1[i] < array2[j]:
+			result.append(array1[i])
+			i += 1
+		else:
+			result.append(array2[j])
+			j += 1
 
-    # 남은 요소들 추가
-    result.extend(array1[i:])
-    result.extend(array2[j:])
+	# 남은 요소들 추가
+	result.extend(array1[i:])
+	result.extend(array2[j:])
 
-    return result
+	return result
 
 
 array = [5, 3, 2, 1, 6, 8, 7, 4]
 
 
 def merge_sort(array):
-    if len(array) <= 1:
-        return array
-    mid = (0 + len(array)) // 2
-    left_array = merge_sort(array[:mid])
-    right_array = merge_sort(array[mid:])
-    return merge(left_array, right_array)
+	if len(array) <= 1:
+		return array
+	mid = (0 + len(array)) // 2
+	left_array = merge_sort(array[:mid])
+	right_array = merge_sort(array[mid:])
+	return merge(left_array, right_array)
 
 
 print(merge_sort(array))  # [1, 2, 3, 4, 5, 6, 7, 8] 가 되어야 합니다!

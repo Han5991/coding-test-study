@@ -2,12 +2,12 @@ input = [4, 6, 2, 9, 1]
 
 
 def bubble_sort(array):
-    n = len(array)
-    for i in range(n):
-        for j in range(0, n - i - 1):
-            if array[j] > array[j + 1]:  # 오름차순 정렬을 위해 부등호 방향 변경
-                array[j], array[j + 1] = array[j + 1], array[j]
-    return array
+	n = len(array)
+	for i in range(n):
+		for j in range(0, n - i - 1):
+			if array[j] > array[j + 1]:  # 오름차순 정렬을 위해 부등호 방향 변경
+				array[j], array[j + 1] = array[j + 1], array[j]
+	return array
 
 
 # bubble_sort(input)
