@@ -7,7 +7,7 @@ class MaxHeap:
 		self.items.append(value)
 		cur_index = len(self.items) - 1
 
-		while cur_index > 1:  # cur_index 가 1이 되면 정상을 찍은거라 다른 것과 비교 안하셔도 됩니다!
+		while cur_index > 1:
 			parent_index = cur_index // 2
 			if self.items[parent_index] < self.items[cur_index]:
 				self.items[parent_index], self.items[cur_index] = self.items[cur_index], self.items[
